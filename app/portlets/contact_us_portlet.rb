@@ -14,8 +14,12 @@ class ContactUsPortlet < Portlet
     
     if question.save
       
-      if @portlet.notify_me
-        Notifications.deliver_new_question_notification(question)
+      if self.notify_me
+        begin
+          Notifications.deliver_new_question_notification(question, self.notify_emails)
+        rescue => e
+          logger.error "[ERROR] in ContactUsPortlet => #{e}"
+        end
       end
       
       flash[:notice] = "We have received your message and will get intouch with you within 48 hours."
