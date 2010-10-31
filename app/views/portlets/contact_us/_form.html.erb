@@ -1,0 +1,13 @@
+<%= f.cms_text_field :name %>
+<%= f.cms_check_box :notify_me, :instructions => 'To enable email notification put a check mark here.' %>
+<%= f.cms_text_field :notify_emails, 
+		:instructions => 'Email addresses to notify after a successful submitted question; emails separated by a comma' %>
+<%= f.cms_drop_down :success_url, 
+   	[["Default url",""]] + Page.all(:order => "name").map{|c| ["#{c.name} - [#{c.path}]", c.path]},
+	:label => "Success url",
+    :instructions => "Determines which page to forward to after a successful submitted question." %>
+<%= f.cms_drop_down :failure_url, 
+	[["Default url",""]] + Page.all(:order => "name").map{|c| ["#{c.name} - [#{c.path}]", c.path]},
+	:label => "Failure url",
+    :instructions => "Determines which page to forward to after a failed submitted question." %>
+<%= f.cms_template_editor :template %>
