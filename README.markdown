@@ -12,4 +12,4 @@ Contact Us module for BrowserCMS gives you a portlet to put on a contact us page
 Contact Us is released under a LGPL license, and is copyright 1998-2009 Zerolimitstech. The complete copyright can be found in COPYRIGHT.txt, and copy of the license can be found in LICENSE.txt.
 
 ## Support
-If you have problems with this module please contact zerolimits at our website www.zerolimitstech.com
+If you have problems with this module add a new issue under the issues tab on github
