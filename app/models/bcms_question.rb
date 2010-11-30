@@ -1,11 +1,11 @@
-class Question < ActiveRecord::Base
+class BcmsQuestion < ActiveRecord::Base
   acts_as_content_block
   
   # Pattern used to find real emails
   EMAIL_PATTERN = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i  
   
   # i18n messages stored in config/locales/en.yml
-  validates_presence_of   :email
+  validates_presence_of   :email, :name
   validates_format_of     :email, :with => EMAIL_PATTERN
 
   # display_name is used in the admin secton of the cms to give our

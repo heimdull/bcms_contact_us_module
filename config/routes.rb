@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
-  map.namespace('cms') {|cms| cms.content_blocks :questions }
+  
+  map.namespace('cms') {|cms| cms.content_blocks :bcms_questions }
 
   map.routes_for_browser_cms
 

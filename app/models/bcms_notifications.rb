@@ -1,4 +1,4 @@
-class Notifications < ActionMailer::Base
+class BcmsNotifications < ActionMailer::Base
   
 
   def new_question_notification(question, recipients, from_email="no_reply@bcms-site.com", subject="New question submitted")

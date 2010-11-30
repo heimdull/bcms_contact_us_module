@@ -5,12 +5,12 @@ class ContactUsPortlet < Portlet
      
   def render
     pmap = flash[instance_name] || params
-    @question = Question.new pmap[:question]
-    @question.errors.add_from_hash flash["#{instance_name}_errors"]
+    @bcms_question = BcmsQuestion.new pmap[:bcms_question]
+    @bcms_question.errors.add_from_hash flash["#{instance_name}_errors"]
   end
   
   def action
-    question = Question.new(params[:question] || {})
+    question = BcmsQuestion.new(params[:bcms_question] || {})
     
     if question.save
       
