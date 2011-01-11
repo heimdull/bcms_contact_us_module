@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{bcms_contact_us_module}
-  s.version = "1.1.1"
+  s.version = "1.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Freddy Andersen"]
@@ -40,13 +40,12 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.4.1}
   s.summary = %q{Contact Us portlet in BrowserCMS}
   s.test_files = [
-    "test/functional/cms/questions_controller_test.rb",
+    "test/functional/cms/bcms_questions_controller_test.rb",
      "test/performance/browsing_test.rb",
      "test/test_helper.rb",
-     "test/unit/models/question_test.rb",
-     "test/unit/notifications_test.rb",
-     "test/unit/portlets/contact_us_portlet_test.rb",
-     "test/unit/question_observer_test.rb"
+     "test/unit/bcms_notifications_test.rb",
+     "test/unit/bcms_question_test.rb",
+     "test/unit/portlets/contact_us_portlet_test.rb"
   ]
 
   if s.respond_to? :specification_version then
