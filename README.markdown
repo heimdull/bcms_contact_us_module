@@ -23,7 +23,7 @@ Run this
 	
 Add this to config/routes.rb
 
-	map.routes_for_bcms_questions
+	map.routes_for_bcms_contact_us_module
 	map.routes_for_browser_cms
 
 ## License
