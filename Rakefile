@@ -26,6 +26,7 @@ begin
     gemspec.files -= Dir["db/migrate/*_load_seed_data.rb"]
     gemspec.files += Dir["rails/init.rb"]
   end
+	Jeweler::GemcutterTasks.new
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
 end
