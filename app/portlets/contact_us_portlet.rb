@@ -14,12 +14,18 @@ class ContactUsPortlet < Portlet
     
     if question.save
       
-      if self.notify_me
-        begin
-          Notifications.deliver_new_question_notification(question, self.notify_emails)
-        rescue => e
-          logger.error "[ERROR] in ContactUsPortlet => #{e}"
+      if self.notify_me.to_i == 1
+        logger.debug "[DEBUG] notify me is enabled"
+        unless self.notify_emails.blank?
+          logger.debug "[DEBUG] Sending email to #{self.notify_emails}"
+          begin
+            BcmsNotifications.deliver_message_notification(question, self.notify_emails)
+          rescue => e
+            logger.error "[ERROR] in ContactUsPortlet => #{e}"
+          end
         end
+      else
+        logger.debug "[DEBUG] E-Mail is disabled"
       end
       
       flash[:notice] = "We have received your message and will get intouch with you within 48 hours."

@@ -8,6 +8,12 @@
   <body>
     <%= cms_toolbar %>
 	<%= render_breadcrumbs %>
+	<% if flash[:notice] %>
+      <p class="notice"><%= flash[:notice] %></p>
+    <% end %>
+    <% if flash[:error] %>
+      <p class="error"><%= flash[:error] %></p>
+    <% end %>
 	<%= container :default %>
   </body>
 </html>

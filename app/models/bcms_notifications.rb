@@ -1,12 +1,13 @@
 class BcmsNotifications < ActionMailer::Base
   
 
-  def new_question_notification(question, recipients, from_email="no_reply@bcms-site.com", subject="New question submitted")
-    subject    subject
-    recipients recipients
-    from       from_email
+  def message_notification(question, to, from_email="no_reply@bcms-site.com", subject="New message")
+    recipients  to
+    from        from_email
+    subject     subject
+    sent_on     Time.now
     
-    body       "Question Subject: " + question.subject + "\n\n" + question.message
+    body       :question => question
   end
 
 end
