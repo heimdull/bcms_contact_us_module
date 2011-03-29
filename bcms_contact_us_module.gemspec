@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{bcms_contact_us_module}
-  s.version = "1.1.3"
+  s.version = "1.1.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Freddy Andersen"]
-  s.date = %q{2011-01-17}
+  s.date = %q{2011-03-29}
   s.description = %q{A BrowserCMS module that gives you a contact us portlet}
   s.email = %q{freddy@zerolimitstech.com}
   s.extra_rdoc_files = [
@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
     "app/models/bcms_question.rb",
     "app/portlets/contact_us_portlet.rb",
     "app/portlets/helpers/contact_us_portlet_helper.rb",
+    "app/views/bcms_notifications/message_notification.text.plain.erb",
     "app/views/cms/bcms_questions/_form.html.erb",
     "app/views/cms/bcms_questions/render.html.erb",
     "app/views/layouts/templates/default.html.erb",
@@ -36,7 +37,7 @@ Gem::Specification.new do |s|
   ]
   s.homepage = %q{http://github.com/heimdull/bcms_contact_us_module}
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.4.1}
+  s.rubygems_version = %q{1.6.2}
   s.summary = %q{Contact Us portlet in BrowserCMS}
   s.test_files = [
     "test/functional/cms/bcms_questions_controller_test.rb",
